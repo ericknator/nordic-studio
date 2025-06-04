@@ -1,59 +1,95 @@
-# NordicStudio
+# 🎓 Nordic Studio – Web para ofrecer servicios de inglés
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+Sitio web profesional desarrollado para una profesora de inglés, inspirado en el diseño de [inglesconomar.com](https://inglesconomar.com), con funcionalidades modernas y responsive.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Despliegue
+
+El sitio está actualmente desplegado en **Netlify** y disponible en:
+
+👉 [https://nordic-studio.netlify.app](https://nordic-studio.netlify.app)
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- [Angular 16+](https://angular.io/)
+- Bootstrap 5
+- AOS (Animate On Scroll)
+- HTML5 / CSS3
+- Git + GitHub para control de versiones
+- Netlify para hosting y CI/CD
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+nordic-studio/
+├── src/
+│   ├── app/
+│   ├── assets/
+│   ├── index.html
+│   └── ...
+├── angular.json
+├── netlify.toml
+├── package.json
+└── README.md
+```
+
+---
+
+## 🧠 Funcionalidades clave
+
+- Diseño responsive y elegante.
+- Menú hamburguesa en dispositivos móviles.
+- Cambio de tema dinámico (modo claro / oscuro).
+- Animaciones suaves con AOS.
+- Íconos e imágenes personalizados.
+- Preparado para escalar con rutas como `/blog`, `/clases`, etc.
+
+---
+
+## ⚙️ Comandos útiles
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Compilar para desarrollo
 ng serve
+
+# Compilar para producción
+npm run build
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🧩 Despliegue en Netlify
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+```toml
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/nordic-studio/browser/browser"
 
-```bash
-ng generate component component-name
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 👨‍💻 Desarrollado por
 
-## Building
+**Erick Loayza**  
+Arquitecto de soluciones comerciales y desarrollador web  
+📬 jeloech@icloud.com | 📱 +51 923612736  
+🌐 [https://alesso.netlify.app](https://nordic-studio.netlify.app/)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📸 Vista previa
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Podés agregar acá una captura del sitio o un gif de scroll para que se vea lo bien que quedó.
