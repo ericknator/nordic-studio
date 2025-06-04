@@ -1,0 +1,44 @@
+<header class="header-nordic bg-dark text-white px-4 py-2">
+  <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+    <!-- Botón hamburguesa visible solo en mobile -->
+    <button class="btn btn-outline-light d-lg-none" (click)="toggleMenu()" aria-label="Menú">
+      <i class="bi" [ngClass]="isMenuOpen ? 'bi-x-lg' : 'bi-list'"></i>
+    </button>
+
+    <!-- ÍCONOS SOCIALES A LA IZQUIERDA -->
+    <div class="d-flex gap-3 align-items-center">
+      <a href="https://github.com/ErickLoayza" target="_blank" class="text-white"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com/in/erickloayza" target="_blank" class="text-white"><i class="bi bi-linkedin"></i></a>
+      <a href="https://wa.me/51923612736" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <!-- LOGO Y NOMBRE CENTRADO -->
+    <div class="text-center mx-auto">
+      <a routerLink="/" class="d-flex flex-column align-items-center text-decoration-none">
+        <img src="/img/logo2.png" alt="Logo Nordic Studio" width="55" height="55" class="logo-img mb-1" />
+        <h1 class="fs-4 fw-bold m-0 text-white">Nordic Studio</h1>
+      </a>
+    </div>
+
+    <!-- BOTÓN DE CAMBIO DE TEMA A LA DERECHA -->
+    <div class="d-flex align-items-center">
+      <button class="btn btn-sm btn-outline-light theme-toggle-btn" (click)="toggleTheme()" title="Cambiar tema">
+        <i [ngClass]="isDarkTheme ? 'bi bi-sun' : 'bi bi-moon'"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav [class.d-none]="!isMenuOpen && isMobileView" class="mt-2">
+    <ul class="nav flex-column flex-lg-row justify-content-center flex-wrap text-center">
+      <li class="nav-item"><a class="nav-link text-white" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link text-white" routerLink="/nosotros" routerLinkActive="active">Nosotros</a></li>
+      <li class="nav-item"><a class="nav-link text-white" routerLink="/servicios" routerLinkActive="active">Servicios</a></li>
+      <li class="nav-item"><a class="nav-link text-white" routerLink="/portafolio" routerLinkActive="active">Portafolio</a></li>
+      <li class="nav-item"><a class="nav-link text-white" routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+    </ul>
+  </nav>
+
+</header>
