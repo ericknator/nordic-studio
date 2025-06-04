@@ -1,0 +1,16 @@
+.nosotros-nordic {
+  background-color: #f5f5f5;
+  border-top: 2px solid #0dcaf0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nosotros-nordic h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.nosotros-nordic p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
