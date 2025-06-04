@@ -86,7 +86,7 @@ npm run build
 **Erick Loayza**  
 Arquitecto de soluciones comerciales y desarrollador web  
 📬 jeloech@icloud.com | 📱 +51 923612736  
-🌐 [https://alesso.netlify.app](https://nordic-studio.netlify.app/)
+🌐 [https://nordic-studio.netlify.app](https://nordic-studio.netlify.app/)
 
 ---
 
