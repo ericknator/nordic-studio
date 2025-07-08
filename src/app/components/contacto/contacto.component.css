@@ -116,3 +116,19 @@
     order: 2;
   }
 }
+
+.mensaje-exito {
+  margin-top: 1.5rem;
+  background-color: #d1f3f7;
+  color: #0ca9c7;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  animation: fadeInUp 0.6s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.animate {
+  animation: fadeInUp 0.6s ease;
+}

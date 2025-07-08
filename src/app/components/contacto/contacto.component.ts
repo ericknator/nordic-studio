@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-contacto',
@@ -11,8 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
+  enviado = false;
+
   enviarFormulario(event: Event) {
     event.preventDefault();
-    alert('✅ Mensaje enviado correctamente (simulado)');
+    this.enviado = true;
+
+    setTimeout(() => {
+      this.enviado = false;
+    }, 3000);
   }
 }
