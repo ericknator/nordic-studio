@@ -14,7 +14,7 @@
   box-shadow: 0 0 15px rgba(13, 202, 240, 0.25);
 }
 
-.card-servicio h5 {
+.card-servicio h5, .card-servicio h4 {
   color: #0dcaf0;
   margin-top: 0.5rem;
 }
