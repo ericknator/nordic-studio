@@ -38,10 +38,15 @@
 .project-img {
   width: 100%;
   height: 130px;
-  object-fit: contain;  /* antes era 'cover' */
+  object-fit: contain;
   border-bottom: 1px solid #ddd;
   padding: 10px;
   background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05); /* agranda levemente */
 }
 
 
@@ -103,6 +108,7 @@
   width: 90%;
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-in-out;
 }
 
 .cerrar-modal {
@@ -125,4 +131,15 @@
 
 .modal-content li {
   margin-bottom: 5px;
+}
+
+@keyframes modalFadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

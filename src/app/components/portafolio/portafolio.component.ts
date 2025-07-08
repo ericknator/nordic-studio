@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portafolio',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './portafolio.component.html',
   styleUrl: './portafolio.component.css'
 })
+
 
 export class PortafolioComponent {
   mostrarModal = false;
@@ -18,4 +20,5 @@ export class PortafolioComponent {
     this.mostrarModal = false;
   }
 }
+
 
