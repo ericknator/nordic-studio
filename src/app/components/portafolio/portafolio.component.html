@@ -2,30 +2,16 @@
   <h2><span>Nuestro</span> <span class="highlight">Portafolio</span></h2>
 
   <div class="portafolio-grid">
-    <!-- SIGPI -->
-    <!-- Tarjeta de SIGPI -->
-    <div class="portafolio-card">
-    <img src="/img/portafolio/sigpi.png" alt="SIGPI" />
-    <h3>SIGPI - Gestión PNP</h3>
-    <p>Sistema para gestión de pedidos de información en oficinas PNP con PDF, Excel y filtros avanzados.</p>
-    <button (click)="abrirModal()">Ver detalles</button>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal-overlay" *ngIf="mostrarModal" (click)="cerrarModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-        <span class="cerrar-modal" (click)="cerrarModal()">×</span>
-        <h2>SIGPI - Gestión de Pedidos de Información</h2>
-        <p><strong>Cliente:</strong> Oficina PNP</p>
-        <p><strong>Funcionalidades:</strong></p>
-        <ul>
-        <li>Registro de pedidos con validaciones</li>
-        <li>Exportación a PDF y Excel</li>
-        <li>Buscador avanzado por fuente, año, folio</li>
-        <li>Interfaz moderna con identidad institucional</li>
-        </ul>
-        <p><strong>Tecnologías:</strong> Python (Tkinter), SQLite, FPDF, Excel</p>
-    </div>
+    <!-- SIGPI -->
+    <div class="project-card">
+      <img src="/img/portafolio/sigpi.png" alt="SIGPI" class="project-img" />
+      <div class="project-content">
+        <small>SIGPI</small>
+        <h5>SIGPI - Gestión PNP</h5>
+        <p>Sistema para gestión de pedidos de información en oficinas PNP con PDF, Excel y filtros avanzados.</p>
+        <button (click)="abrirModal()">Ver detalles</button>
+      </div>
     </div>
 
     <!-- WhatsApp Zapier -->
@@ -59,6 +45,23 @@
         <p>Informes automáticos conectados a formularios y bases de datos, ideal para visualizar métricas en tiempo real.</p>
         <button>Ver detalles</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal para SIGPI -->
+  <div class="modal-overlay" *ngIf="mostrarModal" (click)="cerrarModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="cerrar-modal" (click)="cerrarModal()">×</span>
+      <h2>SIGPI - Gestión de Pedidos de Información</h2>
+      <p><strong>Cliente:</strong> Oficina PNP</p>
+      <p><strong>Funcionalidades:</strong></p>
+      <ul>
+        <li>Registro de pedidos con validaciones</li>
+        <li>Exportación a PDF y Excel</li>
+        <li>Buscador avanzado por fuente, año, folio</li>
+        <li>Interfaz moderna con identidad institucional</li>
+      </ul>
+      <p><strong>Tecnologías:</strong> Python (Tkinter), SQLite, FPDF, Excel</p>
     </div>
   </div>
 </section>
