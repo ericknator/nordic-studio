@@ -1,56 +1,64 @@
-<section class="portafolio-nordic py-5 px-4 text-dark">
-  <div class="container">
-    <h2 class="fw-bold text-center mb-5" data-aos="fade-up">
-      Nuestro <span class="text-info">Portafolio</span>
-    </h2>
+<section class="portafolio-section" id="portafolio">
+  <h2><span>Nuestro</span> <span class="highlight">Portafolio</span></h2>
 
-    <div class="row g-4">
+  <div class="portafolio-grid">
+    <!-- SIGPI -->
+    <!-- Tarjeta de SIGPI -->
+    <div class="portafolio-card">
+    <img src="/img/portafolio/sigpi.png" alt="SIGPI" />
+    <h3>SIGPI - Gestión PNP</h3>
+    <p>Sistema para gestión de pedidos de información en oficinas PNP con PDF, Excel y filtros avanzados.</p>
+    <button (click)="abrirModal()">Ver detalles</button>
+    </div>
 
-      <!-- SIGPI -->
-      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
-        <div class="card-proyecto border border-info rounded-4 shadow-sm h-100">
-          <img src="/img/portafolio/sigpi.png" class="img-fluid rounded-top" alt="SIGPI" />
-          <div class="p-4">
-            <h5 class="fw-semibold text-info">SIGPI - Gestión PNP</h5>
-            <p class="small">Sistema para gestión de pedidos de información en oficinas PNP con PDF, Excel y filtros avanzados.</p>
-            <a routerLink="/sigpi" class="btn btn-outline-info btn-sm">Ver detalles</a>
-          </div>
-        </div>
+    <!-- Modal -->
+    <div class="modal-overlay" *ngIf="mostrarModal" (click)="cerrarModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <span class="cerrar-modal" (click)="cerrarModal()">×</span>
+        <h2>SIGPI - Gestión de Pedidos de Información</h2>
+        <p><strong>Cliente:</strong> Oficina PNP</p>
+        <p><strong>Funcionalidades:</strong></p>
+        <ul>
+        <li>Registro de pedidos con validaciones</li>
+        <li>Exportación a PDF y Excel</li>
+        <li>Buscador avanzado por fuente, año, folio</li>
+        <li>Interfaz moderna con identidad institucional</li>
+        </ul>
+        <p><strong>Tecnologías:</strong> Python (Tkinter), SQLite, FPDF, Excel</p>
+    </div>
+    </div>
+
+    <!-- WhatsApp Zapier -->
+    <div class="project-card">
+      <img src="/img/portafolio/zapier.png" alt="Zapier WhatsApp" class="project-img" />
+      <div class="project-content">
+        <small>Zapier WhatsApp</small>
+        <h5>Automatización WhatsApp</h5>
+        <p>Conexión entre formularios y WhatsApp usando Zapier, ideal para respuestas instantáneas y ventas.</p>
+        <button>Ver detalles</button>
       </div>
+    </div>
 
-      <!-- WhatsApp Zapier -->
-      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card-proyecto border border-info rounded-4 shadow-sm h-100">
-          <img src="/img/zapier.jpg" class="img-fluid rounded-top" alt="Zapier WhatsApp" />
-          <div class="p-4">
-            <h5 class="fw-semibold text-info">Automatización WhatsApp</h5>
-            <p class="small">Conexión entre formularios y WhatsApp usando Zapier, ideal para respuestas instantáneas y ventas.</p>
-          </div>
-        </div>
+    <!-- Catálogo Maquillaje -->
+    <div class="project-card">
+      <img src="/img/portafolio/catalogo.png" alt="Catálogo de Maquillaje" class="project-img" />
+      <div class="project-content">
+        <small>Catálogo Maquillaje</small>
+        <h5>Catálogo de Maquillaje</h5>
+        <p>Sistema sencillo para mostrar productos, tomar pedidos y organizar tu emprendimiento en línea.</p>
+        <button>Ver detalles</button>
       </div>
+    </div>
 
-      <!-- Catálogo Maquillaje -->
-      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-proyecto border border-info rounded-4 shadow-sm h-100">
-          <img src="/img/maquillaje.jpg" class="img-fluid rounded-top" alt="Catálogo Maquillaje" />
-          <div class="p-4">
-            <h5 class="fw-semibold text-info">Catálogo de Maquillaje</h5>
-            <p class="small">Sistema sencillo para mostrar productos, tomar pedidos y organizar tu emprendimiento en línea.</p>
-          </div>
-        </div>
+    <!-- Dashboard en Sheets -->
+    <div class="project-card">
+      <img src="/img/portafolio/dashboard.png" alt="Dashboard en Sheets" class="project-img" />
+      <div class="project-content">
+        <small>Dashboard Sheets</small>
+        <h5>Dashboard en Sheets</h5>
+        <p>Informes automáticos conectados a formularios y bases de datos, ideal para visualizar métricas en tiempo real.</p>
+        <button>Ver detalles</button>
       </div>
-
-      <!-- Dashboard Sheets -->
-      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="card-proyecto border border-info rounded-4 shadow-sm h-100">
-          <img src="/img/dashboard.jpg" class="img-fluid rounded-top" alt="Dashboard Sheets" />
-          <div class="p-4">
-            <h5 class="fw-semibold text-info">Dashboard en Sheets</h5>
-            <p class="small">Informes automáticos conectados a formularios y bases de datos, ideal para visualizar métricas en tiempo real.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
