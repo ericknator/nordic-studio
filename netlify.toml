@@ -1,7 +1,6 @@
 [build]
   command = "ng build --configuration production"
   publish = "dist/nordic-studio/browser/browser"
-  ignore = "echo 'skip double build'"
 
 # El resto de tu configuración (como los redirects) puede ir debajo
 [[redirects]]
