@@ -1,0 +1,22 @@
+.portafolio-nordic {
+  background-color: #f0f0f0;
+  border-top: 2px solid #0dcaf0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-proyecto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.card-proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.2);
+}
+
+.card-proyecto img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  max-height: 180px;
+  object-fit: cover;
+}
