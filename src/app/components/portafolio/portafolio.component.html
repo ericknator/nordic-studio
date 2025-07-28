@@ -9,7 +9,7 @@
       <div class="project-content">
         <small>SIGPI</small>
         <h5>SIGPI - Gestión PNP</h5>
-        <p>Sistema para gestión de pedidos de información en oficinas PNP con PDF, Excel y filtros avanzados.</p>
+        <p>Plataforma para el registro, seguimiento y reporte de pedidos de información en oficinas policiales. Incluye PDF con logos oficiales.</p>
         <button (click)="abrirModal()">Ver detalles</button>
       </div>
     </div>
@@ -20,7 +20,7 @@
       <div class="project-content">
         <small>Zapier WhatsApp</small>
         <h5>Automatización WhatsApp</h5>
-        <p>Conexión entre formularios y WhatsApp usando Zapier, ideal para respuestas instantáneas y ventas.</p>
+        <p>Automatización comercial de WhatsApp: conecta formularios web con WhatsApp Business para confirmar pedidos en segundos.</p>
         <button>Ver detalles</button>
       </div>
     </div>
@@ -31,7 +31,7 @@
       <div class="project-content">
         <small>Catálogo Maquillaje</small>
         <h5>Catálogo de Maquillaje</h5>
-        <p>Sistema sencillo para mostrar productos, tomar pedidos y organizar tu emprendimiento en línea.</p>
+        <p>Sistema para ventas de productos por catálogo. Incluye visualización, control de stock y registro de pedidos automático.</p>
         <button>Ver detalles</button>
       </div>
     </div>
@@ -42,26 +42,87 @@
       <div class="project-content">
         <small>Dashboard Sheets</small>
         <h5>Dashboard en Sheets</h5>
-        <p>Informes automáticos conectados a formularios y bases de datos, ideal para visualizar métricas en tiempo real.</p>
+        <p>Visualización de métricas conectadas a formularios y bases de datos en tiempo real. Ideal para decisiones rápidas.</p>
         <button>Ver detalles</button>
       </div>
     </div>
+
+    <!-- GameZone React -->
+    <div class="project-card">
+      <img src="/img/portafolio/gamezone.png" alt="GameZone" class="project-img" />
+      <div class="project-content">
+        <small>Sitio Web Interactivo</small>
+        <h5>GameZone SPA</h5>
+        <p>Single Page Application con diseño moderno y navegación optimizada. Ideal para startups de videojuegos o contenido digital.</p>
+        <button (click)="abrirModal('gamezone')">Ver detalles</button>
+      </div>
+    </div>
+
+
+    <!-- App Android con Firebase -->
+    <div class="project-card">
+      <img src="/img/portafolio/androidapp.png" alt="Android Firebase" class="project-img" />
+      <div class="project-content">
+        <small>Aplicación Móvil</small>
+        <h5>App Android Firebase</h5>
+        <p>Solución móvil con login seguro, integración de cámara, audio y descarga de imágenes. Ideal para apps corporativas o educativas.</p>
+        <button (click)="abrirModal('android')">Ver detalles</button>
+      </div>
+    </div>
+
+    <!-- App para Restaurantes (Android) -->
+    <div class="project-card">
+      <img src="/img/portafolio/restaurante.png" alt="App Restaurante" class="project-img" />
+      <div class="project-content">
+        <small>App de Gestión</small>
+        <h5>App para Restaurantes</h5>
+        <p>Aplicación móvil para gestión de pedidos, reservas y menú digital. Fluida, adaptable y lista para implementación inmediata.</p>
+        <button (click)="abrirModal('restaurante')">Ver detalles</button>
+      </div>
+    </div>
+
+    <!-- App para Iphone -->
+    <div class="project-card">
+      <img src="/img/portafolio/iphoneapp.png" alt="App iPhone" class="project-img" />
+      <div class="project-content">
+        <small>Aplicación iOS</small>
+        <h5>App para iPhone</h5>
+        <p>Solución desarrollada para iOS con diseño limpio y navegación intuitiva. Escalable para múltiples sectores.</p>
+        <button (click)="abrirModal('iphone')">Ver detalles</button>
+      </div>
+    </div>
+
+    <!-- QA Testing -->
+    <div class="project-card">
+      <img src="/img/portafolio/testing.png" alt="QA Testing" class="project-img" />
+      <div class="project-content">
+        <small>Calidad de Software</small>
+        <h5>Testing y QA</h5>
+        <p>Documentación completa para pruebas funcionales: casos de prueba, trazabilidad y gestión de defectos. Ideal para áreas de QA.</p>
+        <button (click)="abrirModal('qa')">Ver detalles</button>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Modal para SIGPI -->
-  <div class="modal-overlay" *ngIf="mostrarModal" (click)="cerrarModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-      <span class="cerrar-modal" (click)="cerrarModal()">×</span>
-      <h2>SIGPI - Gestión de Pedidos de Información</h2>
-      <p><strong>Cliente:</strong> Oficina PNP</p>
-      <p><strong>Funcionalidades:</strong></p>
-      <ul>
-        <li>Registro de pedidos con validaciones</li>
-        <li>Exportación a PDF y Excel</li>
-        <li>Buscador avanzado por fuente, año, folio</li>
-        <li>Interfaz moderna con identidad institucional</li>
-      </ul>
-      <p><strong>Tecnologías:</strong> Python (Tkinter), SQLite, FPDF, Excel</p>
-    </div>
+  <!-- Modal dinámico -->
+<div class="modal-overlay" *ngIf="mostrarModal" (click)="cerrarModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="cerrar-modal" (click)="cerrarModal()">×</span>
+
+    <h2>{{ proyectoSeleccionado?.titulo }}</h2>
+    <p><strong>Cliente:</strong> {{ proyectoSeleccionado?.cliente }}</p>
+    <p><strong>Descripción:</strong> {{ proyectoSeleccionado?.descripcion }}</p>
+
+    <p><strong>Funcionalidades:</strong></p>
+    <ul>
+      <li *ngFor="let f of proyectoSeleccionado?.funcionalidades">{{ f }}</li>
+    </ul>
+
+    <p><strong>Tecnologías:</strong> {{ proyectoSeleccionado?.tecnologias }}</p>
+    <p><strong>Estado:</strong> {{ proyectoSeleccionado?.estado }}</p>
   </div>
+</div>
+
+
 </section>
